@@ -24,5 +24,3 @@ let nombres = ['Luke', 'Leia', 'Han', 'Chewie', 'Lando', 'Ben', 'Padme', 'Rey']
 let bonus1 = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 let bonus2 = ['C.1', 'C.2', 'C.3', 'C.4']
 // deberia quedar ['A', 'B', 'C', 'C.1', 'C.2', 'C.3', 'C.4', 'D', 'E', 'F', 'G']
-
-//test
