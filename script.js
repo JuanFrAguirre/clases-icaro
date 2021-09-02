@@ -1,59 +1,59 @@
-// let my_array = ["Gaston", "Juan", "Matias", "Ruben", "Melanie", "Jose"];
+// FUNCTIONS
+// es una forma de encapsular un bloque de codigo para poder ejecutarlo cuando se "llame" a esa funcion.
+// las funciones pueden o no devolver un valor (el return) a donde sea que hayan sido llamadas o a quien sea que las haya llamado
+// la funcion tiene parentesis, donde va a esperar (si los hay) algun parametro, que son datos o variables que pueden ser opcionales y que tienen alguna utilidad dentro del bloque de codigo
+// la funcion tiene unas llaves dentro de las cuales va a ir nuestro bloque de codigo a ejecutarse
 
-// console.log(my_array);
-
-// FOR
-// for (let i = 0; i < my_array.length; i++) {
-// if (my_array[i] == undefined) {
-//   console.log("no hay nada en la posicion", i);
-//   continue;
-// }
-// console.log(my_array[i]);
+// function myFunction(nombre) {
+//   console.log("hola soy " + nombre);
+//   console.log("como es tu nombre?");
 // }
 
-// FOR EACH
-// la dif principal entre el for y el for each es que el foreach solo recorre segun la cantidad de elementos que existan en el array que se recorre, mientras que al for puedo decirle que de tantas vueltas como sus parametros se lo indiquen
-// let number = 0;
-// my_array.forEach((i, index) => {
-//   console.log(number);
-//   number++;
-//   console.log(index);
-//   my_array[index] = "fruta";
-// });
+// function iterar(funcion, parametros, veces) {
+//   for (let i = 0; i < veces; i++) {
+//     funcion(parametros);
+//   }
+// }
 
-// console.log(my_array);
+// iterar(myFunction, "Juan", 10);
 
-// console.log("la variable number quedo en", number);
+// --------------------------
 
-// MAP
-// el metodo map devuelve un nuevo array con el restultado de lo que sea que hagamos con el array al que le llamamos el .map()
+function myFunction2(nombre) {
+  return `Hola soy ${nombre}`
+}
 
-// let my_array = [
-//   { nombre: "Gaston", apellido: "Micozzi" },
-//   { nombre: "Juan", apellido: "Aguirre" },
-//   { nombre: "Matias", apellido: "Duarte" },
-//   { nombre: "Ruben", apellido: "Paez" },
-// ];
+const saludar = function (mensaje1, mensaje2) {
+  console.log(mensaje1)
+  console.log(mensaje2)
+}
 
-// let my_array2 = my_array.map((i) => {
+saludar(myFunction2('Juan'), myFunction2('Jorge'))
 
-//   return `${i.nombre} ${i.apellido}`;
-// });
+// --------------------------
 
-// let my_array2 = my_array.map((i) => `${i.nombre} ${i.apellido}`);
+// Arrow Functions
 
-// let my_array2 = [];
+// function myFunction2(nombre) {
+//   return `Hola soy ${nombre}`;
+// }
 
-// my_array.forEach((i, index) => {
-//   my_array2[index] = `${i.nombre} ${i.apellido}`;
-// });
+// function myFunction3() {
+//   return 'hola'
+// }
 
-// let ids = [2, 5, 7, 45, 78, 93];
+// las arrow functions no llevan la palabra reservada function y ademas luego de los parentesis llevan la flecha o arrow ( => ) ademas si queremos darles un nombre podemos asignarlas a una variable
 
-// let my_array3 = my_array.map((i, index) => {
-//   return { ...i, id: index, modificadoPor: "Juan" };
-// });
+const saludar2 = (nombre) => {
+  console.log('como es tu nombre?')
+  return `Hola soy ${nombre}`
+}
 
-// console.log("array original: ", my_array);
-// console.log("array modificado: ", my_array2);
-// console.log("array modificado: ", my_array3);
+const myFunction3 = () => {
+  return 'hola'
+}
+
+// si el return es la unica instruccion en el bloque de codigo, podemos obviar la palabra 'return' y las llaves
+
+const myFunction4 = () => 'hola'
+const myFunction5 = () => console.log('hola')
