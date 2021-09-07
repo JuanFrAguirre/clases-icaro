@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $negro;
+  // background-image: url('https://picsum.photos/1000/2000');
+  background-size: cover;
+}
+
+h1 {
+  color: $color-primario;
+}
+
+h2 {
+  color: $color-primario;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+h5 {
+  background-color: blue;
+}

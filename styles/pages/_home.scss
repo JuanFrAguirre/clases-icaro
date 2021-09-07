@@ -1,0 +1,35 @@
+// SECCION 1
+
+.section-1 {
+  padding: (2.5 * $size) (5 * $size);
+
+  h3 {
+    color: $blanco;
+    background: $color-primario;
+    text-align: center;
+    padding: 2 * $size;
+  }
+
+  p {
+    padding: (5 * $size) 0 0;
+    font-size: 5 * $size;
+  }
+}
+
+// SECCION 2
+
+.section-2 {
+  @extend .section-1;
+
+  p {
+    @include texto;
+  }
+
+  .btn {
+    gap: 5 * $size;
+
+    button {
+      background-color: #111;
+    }
+  }
+}

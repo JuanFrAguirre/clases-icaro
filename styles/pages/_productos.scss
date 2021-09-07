@@ -1,0 +1,10 @@
+.contenedor-textos {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  @include flexbox(row, space-between, center, 20px, #f00);
+}
+
+.review {
+  @include inject(margin, 20px);
+}

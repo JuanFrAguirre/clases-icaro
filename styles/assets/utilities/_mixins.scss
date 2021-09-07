@@ -1,0 +1,25 @@
+// los mixins resuelven dificultades o problemas que vayan surgiendo, y no deben ser creados simplemente por crear codigo
+
+@mixin texto {
+  font-size: (5.5 * $size);
+  color: purple;
+}
+
+@mixin flexbox($direction, $justify, $align, $gap: 0, $background: $negro) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  background-color: $background;
+}
+
+.color-negro {
+  color: #000;
+}
+
+@mixin inject($property, $value) {
+  #{$property}: $value;
+  padding: 20px;
+  @extend .color-negro;
+}

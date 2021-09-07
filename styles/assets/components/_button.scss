@@ -1,0 +1,13 @@
+.btn {
+  margin: (5 * $size) 0;
+  display: flex;
+  justify-content: center;
+
+  button {
+    border: none;
+    padding: (2.5 * $size) (5.5 * $size);
+    border-radius: (4 * $size);
+    background-color: $color-secundario;
+    color: $blanco;
+  }
+}
