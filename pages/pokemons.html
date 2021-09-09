@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemons</title>
+    <script src="../scripts/index.js" defer></script>
+    <link rel="stylesheet" href="../pokemon.css" />
+  </head>
+  <body>
+    <h1 class="title">Bienvenido a PokemonFinder</h1>
+    <div class="pokemonFinder">
+      <h2 class="pokemonFinder__title">Pokemon Finder</h2>
+      <form class="pokemonFinder__form" id="pokemonForm">
+        <div class="pokemonFinder__input--wrapper">
+          <label class="pokemonFinder__label" for="pokemonInput">
+            <h4>Nombre o ID del pokemon</h4>
+          </label>
+          <input
+            class="pokemonFinder__input"
+            type="text"
+            id="pokemonInput"
+            placeholder="Escribe un pokemon..."
+          />
+        </div>
+        <div class="pokemonFinder__btnWrapper">
+          <button class="pokemonFInder__btn btn" id="btnBuscar">Buscar</button>
+          <button class="pokemonFInder__btn btn" onclick="getPokemonList()">
+            Buscar Todos
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="pokemonInfo" class="pokemonInfo">
+      <h2>Pokemon Info</h2>
+      <h4>ID: <span id="pokemonId">-</span></h4>
+      <h4>Name: <span id="pokemonName">-</span></h4>
+      <img
+        id="pokemonImg"
+        src="#"
+        height="150"
+        width="150"
+        alt="Pokemon Image"
+      />
+    </div>
+    <div id="pokemonList" class="pokemonList"></div>
+  </body>
+</html>
