@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #eee;
+  color: #111;
+  font-family: "Roboto", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__container {
+  background-color: #082c4e;
+}
+
+.header {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.header__logo {
+  font-size: 32px;
+  color: #eee;
+  font-weight: 300;
+}
+
+.header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.header__search--input {
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  padding: 4px 5px;
+}
+
+.header__search--btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header__search--btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.header__search--btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.header__nav--item {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  font-weight: 300;
+}
+
+.header__nav--item:hover {
+  color: #245b8f;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #111;
+  color: #eee;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.footer__title {
+  text-transform: uppercase;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link {
+  background-color: #eee;
+  border-radius: 7.5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer__link img {
+  height: 30px;
+  width: 30px;
+}
+
+.hero {
+  height: 400px;
+  background-image: url("./img/pizza_hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hero__card {
+  margin-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #eee;
+  padding: 25px 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.hero__card--btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #245b8f;
+  font-size: 20px;
+  font-weight: bold;
+  color: #eee;
+  border-radius: 7.5px;
+}
