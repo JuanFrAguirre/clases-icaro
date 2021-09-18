@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="./scripts/index.js" defer></script>
   </head>
   <body>
-    <h1>Hola Mundo!</h1>
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        expedita.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        expedita.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-        expedita.
-      </p>
+    <div class="header__container">
+      <header class="header">
+        <h1 class="header__title">MyPage</h1>
+        <button id="menuBtn" class="header__menuBtn">
+          <img src="./img/menu.svg" alt="" height="40" width="40" />
+        </button>
+        <nav id="menu" class="header__nav">
+          <a class="header__link" href="#">Inicio</a>
+          <a class="header__link" href="#">Productos</a>
+          <a class="header__link" href="#">Contacto</a>
+        </nav>
+      </header>
     </div>
   </body>
 </html>
