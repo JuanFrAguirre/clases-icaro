@@ -1,7 +1,11 @@
 <p>componente2 works!</p>
-<div class="userList">
+
+<!-- Codigo de datos del usuario -->
+<div *ngIf="user">
   <p>{{ user.name }}</p>
-  <!-- <div class="user" *ngFor="let user of usersData">
-    <p>{{ user.name }}</p>
-  </div> -->
+</div>
+
+<!-- Template para cuando no hay datos cargados -->
+<div *ngIf="!user">
+  <p>No hay datos</p>
 </div>

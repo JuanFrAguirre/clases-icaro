@@ -13,20 +13,12 @@ export class Componente2Component implements OnInit, OnDestroy {
   // arrayDeSubs: Subscription[] = [];
   user: any;
 
-  // constructor(private http: HttpClient) {}
   constructor(public _usersService: UsersService) {}
 
   ngOnInit(): void {
-    // this.usersData = [];
-    // this.arrayDeSubs.push(
-    //   this.http
-    //     .get('https://jsonplaceholder.typicode.com/users')
-    //     .subscribe((data) => {
-    //       this.usersData = data;
-    //       console.log(this.usersData);
-    //     })
-    // );
-    this._usersService.getUserById(2).subscribe((data) => (this.user = data));
+    setTimeout(() => {
+      this._usersService.getUserById(2).subscribe((data) => (this.user = data));
+    }, 3500);
   }
 
   ngOnDestroy(): void {
