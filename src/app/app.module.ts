@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { ContactReactiveComponent } from './pages/contact-reactive/contact-reactive.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,15 @@ import { CoreModule } from './core/core.module';
     HomeComponent,
     NotFoundComponent,
     ContactComponent,
+    ContactReactiveComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, CoreModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CoreModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

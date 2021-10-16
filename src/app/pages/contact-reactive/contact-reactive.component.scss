@@ -1,0 +1,14 @@
+.form {
+  &__container {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.redText {
+  color: red;
+}
