@@ -1,6 +1,25 @@
 ## Consignas
 
-- Utilizando el proyecto creado en la guia de ejercicios ejercicios-angular-3 crear en algun componente de contacto (crear uno a tal fin en caso de que aun no exista) un formulario, al cual daremos logica e interacciones utilizando formularios reactivos.
-- ## Este formulario deberia contener los siguientes campos:
-
-### Ejemplos
+- Utilizando el proyecto creado en la guia de ejercicios ejercicios-angular-3 crear en algun componente de contacto (crear uno a tal fin en caso de que aun no exista) un formulario, al cual daremos logica e interacciones utilizando formularios reactivos. El formulario puede llamarse de cualquier manera pero utilizaremos el nombre formData, como en clase, para mayor claridad.
+- Este formulario deberia contener los siguientes campos:
+  - nombre
+  - apellido
+  - correo electronico
+  - direccion (no es un campo en si, si no que debe tener los siguientes campos que agruparemos en la logica como lo vimos en clases)
+    - calle
+    - numeracion
+    - piso/depto
+    - codigo postal
+    - ciudad
+    - provincia
+  - mensaje
+  - desea recibir novedades, promociones, etc.
+- Los campos creados anteriormente (excepto el ultimo que obligatoriamente debe ser un checkbox y el de correo electronico) pueden ser todos de tipo text, pero idealmente intentar aplicar un select para la provincia con algunas opciones precargadas de manera manual.
+- Crear la estructura del formulario en el componente utilizando un FormGroup que contenga sus FormControl y FormGroup anidados segun corresponda.
+- Agregar las siguientes validaciones:
+  - required en todos
+  - minimo de 4 caracteres en nombre y apellido
+  - email y minimo de 10 caracteres en el correo electronico
+  - minimo de 20 caracteres y maximo de 250 caracteres en mensaje
+- Crear un campo condicional (utilizando la directiva \*ngIf) de errores en cada uno de los campos, que contenga un mensaje condicional por cada error posible (como fue visto en clases). Dar estilos minimos para que quede visualmente estetico.
+- Crear un boton enviar que al hacer click haga el submit del formulario, y este submit a su vez deberia imprimir en consola los valores del formData, resetear el formulario y hacer un alert con los datos del formData estilizados correctamente para que el usuario pueda ver lo que se envio de manera limpia. Como extra seria interesante modificar este metodo para que en lugar de hacer un console.log, el alert y luego el reset, que se haga un prompt al usuario, mostrandole los datos y que si acepta, entonces se haga el console.log, el reset y el alert mostrandole simplemente un mensaje de exito.
