@@ -1,19 +1,12 @@
-<div class="form__container">
+<mat-card class="form__container">
   <h1>Contactanos</h1>
   <p>Valido: {{ formData.valid ? "Si" : "No" }}</p>
 
   <form [formGroup]="formData" (ngSubmit)="submitForm()" class="form">
-    <label for="name">Nombre</label>
-    <input
-      formControlName="name"
-      name="name"
-      placeholder="Nombre"
-      id="name"
-      type="text"
-    />
-
-    <br />
-
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="Nombre" type="text" />
+    </mat-form-field>
     <div class="error" *ngIf="userEmail()?.invalid && userEmail()?.touched">
       <small *ngIf="userEmail()?.getError('required')" class="redText"
         >El Email es obligatorio
@@ -28,34 +21,33 @@
         <br />
       </small>
     </div>
-    <label for="email">Email</label>
-    <input
-      formControlName="email"
-      name="email"
-      id="email"
-      placeholder="Email"
-      type="email"
-    />
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        placeholder="Email"
+        type="email"
+      />
+    </mat-form-field>
 
     <br />
-    <label for="age">Edad</label>
-    <input
-      formControlName="age"
-      name="age"
-      id="age"
-      min="0"
-      max="150"
-      type="number"
-    />
+    <mat-form-field appearance="fill">
+      <mat-label for="age">Edad</mat-label>
+      <input formControlName="age" matInput min="0" max="150" type="number" />
+    </mat-form-field>
 
     <br />
-    <label for="mailingList">Suscribirse al mailing list</label>
-    <input
-      formControlName="mailingList"
-      type="checkbox"
-      name="mailingList"
-      id="mailingList"
-    />
+    <div class="form__checkbox">
+      <label for="mailingList">
+        <h4>Suscribirse al mailing list</h4>
+      </label>
+      <mat-checkbox
+        formControlName="mailingList"
+        type="checkbox"
+      ></mat-checkbox>
+    </div>
 
     <br />
     <br />
@@ -90,8 +82,12 @@
       />
     </div>
 
-    <button type="submit">Enviar</button>
-    <button (click)="resetAddress()">Resetear Direccion</button>
+    <div class="form__buttons">
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+      <button mat-raised-button (click)="resetAddress()">
+        Resetear Direccion
+      </button>
+    </div>
 
     <!-- <label for="name">Nombre</label>
     <input
@@ -149,4 +145,4 @@
       Reset Nombre
     </button>
   </div>  -->
-</div>
+</mat-card>

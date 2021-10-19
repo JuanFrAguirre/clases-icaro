@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-reactive',
@@ -7,19 +12,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-reactive.component.scss'],
 })
 export class ContactReactiveComponent implements OnInit {
-  formData = new FormGroup({
-    name: new FormControl('Juan', Validators.required),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.minLength(10),
-      Validators.email,
-    ]),
-    age: new FormControl(0, [Validators.max(99), Validators.min(18)]),
-    mailingList: new FormControl(true),
-    address: new FormGroup({
-      street: new FormControl('San Martin'),
-      number: new FormControl(''),
-      zipCode: new FormControl(''),
+  formData = this.fb.group({
+    name: ['Juan', Validators.required],
+    email: [
+      '',
+      [Validators.required, Validators.minLength(10), Validators.email],
+    ],
+    age: [0, [Validators.max(99), Validators.min(18)]],
+    mailingList: [true],
+    address: this.fb.group({
+      street: ['San Martin'],
+      number: [''],
+      zipCode: [''],
     }),
   });
 
@@ -36,7 +40,7 @@ export class ContactReactiveComponent implements OnInit {
     return this.userAddress()?.get('street');
   }
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 

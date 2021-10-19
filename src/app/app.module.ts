@@ -9,6 +9,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { ContactReactiveComponent } from './pages/contact-reactive/contact-reactive.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ContactReactiveComponent } from './pages/contact-reactive/contact-react
     FormsModule,
     ReactiveFormsModule,
     CoreModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
