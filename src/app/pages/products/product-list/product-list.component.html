@@ -1,0 +1,9 @@
+<div class="product-list">
+  <p>product-list works!</p>
+  <button mat-raised-button color="primary" (click)="requestData()">
+    Pedir datos
+  </button>
+
+  <p *ngIf="!loading && data">{{ data }}</p>
+</div>
+<app-spinner [loading]="loading"></app-spinner>

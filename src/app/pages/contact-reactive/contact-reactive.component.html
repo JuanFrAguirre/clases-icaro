@@ -51,6 +51,38 @@
 
     <br />
     <br />
+
+    <div>
+      <table mat-table [dataSource]="shirtData">
+        <ng-container
+          *ngFor="let shirtField of shirtDataModel"
+          matColumnDef="{{ shirtField.matColumnDef }}"
+        >
+          <th mat-header-cell *matHeaderCellDef>
+            {{ shirtField.matHeaderCellDef }}
+          </th>
+          <td mat-cell *matCellDef="let shirt">
+            {{ shirt[shirtField.matCellDef] }}
+          </td>
+        </ng-container>
+
+        <!-- <ng-container matColumnDef="quantity">
+          <th mat-header-cell *matHeaderCellDef>Quantity</th>
+          <td mat-cell *matCellDef="let shirt">{{ shirt.quantity }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="abbreviation">
+          <th mat-header-cell *matHeaderCellDef>Abbr</th>
+          <td mat-cell *matCellDef="let shirt">{{ shirt.abbr }}</td>
+        </ng-container> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+
+    <br /><br />
+
     <div formGroupName="address">
       <label for="street">Calle</label>
       <input
@@ -82,67 +114,37 @@
       />
     </div>
 
+    <div class="form__shirtSize">
+      <mat-button-toggle-group formControlName="shirtSize">
+        <mat-button-toggle
+          *ngFor="let shirt of shirtData"
+          value="shirt.desc"
+          [disabled]="shirt.quantity === 0"
+          >{{ shirt.abbr }}</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Color</mat-label>
+      <mat-select>
+        <mat-option
+          *ngFor="let shirtColor of shirtColors"
+          [value]="shirtColor.desc | titlecase"
+          >{{ shirtColor.color | titlecase }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
     <div class="form__buttons">
       <button mat-raised-button color="primary" type="submit">Enviar</button>
       <button mat-raised-button (click)="resetAddress()">
         Resetear Direccion
       </button>
     </div>
-
-    <!-- <label for="name">Nombre</label>
-    <input
-      [(ngModel)]="formData.name"
-      type="text"
-      name="name"
-      id="name"
-      placeholder="Nombre"
-    />
-
-    <br />
-    <label for="email">Email</label>
-    <input
-      [(ngModel)]="formData.email"
-      type="email"
-      name="email"
-      id="email"
-      placeholder="Email"
-    />
-
-    <br />
-    <label for="age">Edad</label>
-    <input
-      min="0"
-      max="99"
-      [(ngModel)]="formData.age"
-      type="number"
-      name="age"
-      id="age"
-    />
-
-    <br />
-    <label for="mailingList">Suscribirse al mailing list</label>
-    <input
-      [(ngModel)]="formData.mailingList"
-      type="checkbox"
-      name="mailingList"
-      id="mailingList"
-    />
-    <button
-      [disabled]="!formData.name || !formData.email || formData.age <= 0"
-      (click)="sendFormData()"
-    >
-      Enviar
-    </button>-->
   </form>
   <br />
   <br />
-  <!-- <div>
-    <span *ngIf="formData.name">
-      {{ formData.name }}, muchas gracias por escribirnos! En breve estaremos
-      contactandonos con vos!
-    </span>
-    <button *ngIf="formData.name" (click)="resetName()" type="button">
-      Reset Nombre
-    </button>
-  </div>  -->
 </mat-card>
+
+<app-progress-bar [loading]="loading"></app-progress-bar>

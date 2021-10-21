@@ -18,6 +18,11 @@ const routes: Routes = [
       import('./pages/user/user.module').then((m) => m.UserModule),
   },
   {
+    path: 'products',
+    loadChildren: () =>
+      import('./pages/products/products.module').then((m) => m.ProductsModule),
+  },
+  {
     path: 'contact',
     component: ContactComponent,
   },

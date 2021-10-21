@@ -1,0 +1,22 @@
+.progress-bar {
+  background-color: rgba(#000, 0.75);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  h1 {
+    color: #fc0373;
+  }
+
+  mat-progress-bar {
+    width: 60%;
+  }
+}

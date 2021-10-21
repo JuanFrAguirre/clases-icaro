@@ -9,6 +9,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSelectModule } from '@angular/material/select';
 
 let materialModules = [
   MatButtonModule,
@@ -18,6 +23,11 @@ let materialModules = [
   MatIconModule,
   MatInputModule,
   MatCheckboxModule,
+  MatButtonToggleModule,
+  MatTableModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatSelectModule,
 ];
 
 @NgModule({
